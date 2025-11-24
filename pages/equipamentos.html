@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>História — Real Madrid</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand">
+        <img src="../icons/logo_clube.png" alt="Logo" class="logo" />
+        <span class="club-name">Real Madrid CF</span>
+      </a>
+      <nav class="main-nav">
+        <a href="../index.html">Início</a>
+        <a href="pages/equipamentos.html" class="active">Equipamentos</a>
+        <a href="historia.html">História</a>
+        <a href="plantel.html">Plantel</a>
+        <a href="titulos.html">Títulos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="kits-hero">
+      <h1>Equipamentos 2025/26</h1>
+      <p class="lead">Apresentação dos kits oficiais desta época — casa, fora e 3.º equipamento. Clica nas imagens para ampliar.</p>
+    </section>
+
+    <section class="kits-controls" role="tablist" aria-label="Selecionar equipamento">
+      <button class="kit-btn active" data-kit="casa" role="tab" aria-selected="true">Casa</button>
+      <button class="kit-btn" data-kit="fora" role="tab" aria-selected="false">Fora</button>
+      <button class="kit-btn" data-kit="3o" role="tab" aria-selected="false">3.º Kit</button>
+    </section>
+
+    <section class="kits-gallery" aria-live="polite">
+      <div class="kit-card" data-kit="casa">
+        <div class="image-stage">
+          <img src="../img/camisolaprincipal1.webp" class="gallery-img" data-index="0" alt="Equipamento Casa - Frente" loading="lazy" />
+          <img src="../img/camisolaprincipal2.webp" class="gallery-img" data-index="1" alt="Equipamento Casa - Costas" loading="lazy" hidden />
+          <img src="../img/camisolaprincipal3.webp" class="gallery-img" data-index="2" alt="Equipamento Casa - Lateral" loading="lazy" hidden />
+        </div>
+      </div>
+
+      <div class="kit-card" data-kit="fora" hidden>
+        <div class="image-stage">
+          <img src="../img/camisolasecundaria1.webp" class="gallery-img" data-index="0" alt="Equipamento Fora - Frente" loading="lazy" />
+          <img src="../img/camisolasecundaria2.webp" class="gallery-img" data-index="1" alt="Equipamento Fora - Costas" loading="lazy" hidden />
+          <img src="../img/camisolasecundaria3.webp" class="gallery-img" data-index="2" alt="Equipamento Fora - Lateral" loading="lazy" hidden />
+        </div>
+      </div>
+
+      <div class="kit-card" data-kit="3o" hidden>
+        <div class="image-stage">
+          <img src="../img/camisolaterciaria1.webp" class="gallery-img" data-index="0" alt="3.º Equipamento - Frente" loading="lazy" />
+          <img src="../img/camisolaterciaria2.webp" class="gallery-img" data-index="1" alt="3.º Equipamento - Costas" loading="lazy" hidden />
+          <img src="../img/camisolaterciaria3.webp" class="gallery-img" data-index="2" alt="3.º Equipamento - Lateral" loading="lazy" hidden />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Site criado por David Macieira — IPCA / CTESP - Desenvolvimento Web e Multimédia</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>

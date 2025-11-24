@@ -42,9 +42,85 @@ body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neu
 .cta-group .btn.ghost { background:transparent; border:1px solid var(--blue); color:var(--blue); }
 .cta-group .btn.ghost:hover { background: var(--blue); color:white; }
 
-/* Cards genéricos */
-.cards { display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin-bottom:2rem; }
-.card { padding:1rem; border:1px solid #eee; border-radius:10px; background:#fff; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
+/* Cards Section */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  padding: 1.2rem;
+  border-radius: 12px;
+  background: var(--white);
+  border: 1px solid #eee;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  color: var(--blue);
+  margin-bottom: 0.8rem;
+}
+
+.card p, .card li {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 0.8rem;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Trophies grid: layout para a página de títulos */
+.trophies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0 2.5rem;
+}
+.trophy-card {
+  padding: 1rem;
+  border-radius: 12px;
+  background: var(--white);
+  border: 1px solid #eee;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.trophy-card:hover { transform: translateY(-6px); box-shadow: 0 10px 26px rgba(0,0,0,0.08); }
+.trophy-card img { width:100%; height:160px; object-fit:cover; border-radius:8px; }
+.trophy-card h3 { margin-top:0.7rem; color: var(--blue); font-size: 1.05rem; }
+.trophy-card .count { margin-top:0.35rem; font-weight:700; color:var(--muted); }
+
+
+/* Social Links simples */
+.social-links {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  font-size: 1.6rem;
+  color: var(--blue);
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--gold);
+  transform: scale(1.1);
+}
 
 /* Player Grid */
 .player-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap:1rem; margin-top:1rem; }
@@ -85,7 +161,81 @@ input[type="text"], input[type="email"], textarea { width:100%; padding:0.6rem; 
   .hero { grid-template-columns: 1fr 1fr; gap:2rem; }
   .hero-img { max-height:420px; }
 }
+
 @media (max-width: 600px) {
   .player-grid { grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); }
   .player-card img { height:160px; }
 }
+
+/* História: hero e timeline */
+.hero { display:grid; grid-template-columns: 1fr; gap:1rem; align-items:center; margin:1.2rem 0; }
+.hero-figure { margin:0; }
+.hero-img { width:100%; max-height:320px; object-fit:cover; border-radius:10px; box-shadow:0 8px 26px rgba(0,0,0,0.08); }
+.hero-text h2 { color:var(--blue); margin-bottom:0.4rem; }
+.hero-text .lead { color:var(--muted); margin-bottom:0.6rem; }
+
+.timeline {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top:1rem;
+}
+.timeline .event {
+  display:flex;
+  flex-direction:column;
+  background: var(--white);
+  border:1px solid #eee;
+  border-radius:10px;
+  overflow:hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.timeline .event:hover { transform: translateY(-5px); box-shadow:0 10px 22px rgba(0,0,0,0.06); }
+.timeline .event figure { margin:0; }
+.timeline .event img { width:100%; height:160px; object-fit:cover; display:block; }
+.timeline .event .event-body { padding:0.9rem; }
+.timeline .event time { display:block; color:var(--muted); font-size:0.9rem; margin-bottom:0.35rem; }
+.timeline .event h4 { color:var(--blue); margin:0 0 0.4rem 0; }
+.timeline .event p { color:var(--muted); margin:0; }
+
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+
+@media (min-width: 900px) {
+  .hero { grid-template-columns: 1fr 1fr; gap:2rem; }
+  .hero-img { max-height:420px; }
+}
+
+@media (max-width: 420px) {
+  .timeline .event img { height:140px; }
+}
+
+/* Kits / Equipamentos */
+.kits-hero { margin:1rem 0 1.5rem; }
+.kits-controls { display:flex; gap:0.6rem; margin-bottom:1rem; }
+.kit-btn { padding:0.5rem 0.8rem; border-radius:8px; border:1px solid #e6eefb; background:transparent; color:var(--blue); cursor:pointer; }
+.kit-btn.active { background:var(--blue); color:#fff; }
+
+.kits-gallery { display:grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap:1rem; }
+.kit-card { background:var(--white); border:1px solid #eee; padding:1rem; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.04); }
+.kit-card img { width:100%; height:300px; object-fit:cover; border-radius:8px; margin-bottom:0.6rem; cursor:zoom-in; }
+.kit-card h3 { color:var(--blue); margin-bottom:0.4rem; }
+.kit-card ul { color:var(--muted); }
+
+/* Lightbox simples */
+.js-lightbox { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.85); z-index:9999; }
+.js-lightbox img { max-width:95%; max-height:90%; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,0.6); }
+
+@media (max-width: 600px) {
+  .kit-card img { height:auto; }
+  .image-stage img { max-height:320px; }
+}
+
+/* Gallery controls inside kit cards */
+.gallery-controls { display:flex; align-items:center; justify-content:center; gap:0.6rem; margin-bottom:0.6rem; }
+.gallery-controls button { background:transparent; border:1px solid #e6eefb; color:var(--blue); padding:0.35rem 0.6rem; border-radius:8px; cursor:pointer; font-size:1.1rem; }
+.gallery-controls .gallery-counter { color:var(--muted); font-weight:600; }
+
+.image-stage { position:relative; display:flex; align-items:center; justify-content:center; background:#fbfdff; padding:0.6rem; border-radius:8px; }
+.image-stage img { display:block; width:auto; max-width:100%; max-height:460px; object-fit:contain; }
+
+
+

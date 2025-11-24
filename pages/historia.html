@@ -10,11 +10,12 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="../index.html" class="brand">
-        <img src="../imgs/logo.png" alt="Logo" class="logo" />
+        <img src="../icons/logo_clube.png" alt="Logo" class="logo" />
         <span class="club-name">Real Madrid CF</span>
       </a>
       <nav class="main-nav">
         <a href="../index.html">Início</a>
+        <a href="equipamentos.html">Equipamentos</a>
         <a href="historia.html" class="active">História</a>
         <a href="plantel.html">Plantel</a>
         <a href="titulos.html">Títulos</a>
@@ -25,34 +26,109 @@
   <main class="container">
     <h1>História do Real Madrid</h1>
 
-    <section class="timeline">
-      <div class="event">
-        <h4>1902 — Fundação</h4>
-        <p>O Real Madrid foi fundado em 6 de março de 1902. Desde então tornou-se um dos clubes mais laureados do mundo.</p>
-      </div>
-
-      <div class="event">
-        <h4>1950–1960 — Primeiras glórias europeias</h4>
-        <p>Durante os anos 50 o clube começou a conquistar títulos europeus e a estabelecer a sua imagem internacional.</p>
-      </div>
-
-      <div class="event">
-        <h4>Anos 2000 — Era dos Galácticos</h4>
-        <p>Período em que o clube contratou várias estrelas internacionais, reforçando a sua projeção global.</p>
-      </div>
-
-      <div class="event">
-        <h4>2014–2022 — Sucesso na Champions</h4>
-        <p>O clube voltou a dominar a Europa com múltiplas conquistas da Liga dos Campeões.</p>
+    <!-- Hero com imagem e resumo -->
+    <section class="hero">
+      <figure class="hero-figure">
+        <img src="../img/campo.webp" alt="Estádio do Real Madrid" class="hero-img" />
+        <figcaption class="sr-only">Estádio do Real Madrid</figcaption>
+      </figure>
+      <div class="hero-text">
+        <h2>Uma história de glórias e tradição</h2>
+        <p class="lead">Fundado em 1902, o Real Madrid construiu um dos palmarés mais impressionantes do futebol mundial — uma combinação de títulos nacionais e internacionais que o tornaram referência.</p>
+        <p><a href="#timeline" class="btn">Ver linha temporal</a></p>
       </div>
     </section>
 
-    <section>
-      <h2>Curiosidades</h2>
-      <ul>
-        <li>O Real Madrid detém um dos maiores palmarés na Europa.</li>
-        <li>As cores tradicionais são o branco (equipamento) e o azul/dourado para detalhes.</li>
-      </ul>
+    <!-- Timeline reformatada como grid de eventos -->
+    <section id="timeline" class="timeline">
+      <article class="event">
+        <figure>
+          <img src="../img/1902.webp" alt="Fundação do clube" />
+        </figure>
+        <div class="event-body">
+          <time datetime="1902">1902</time>
+          <h4>Fundação</h4>
+          <p>O Real Madrid foi fundado a 6 de março de 1902. Desde então tornou-se um dos clubes mais laureados do mundo.</p>
+        </div>
+      </article>
+
+      <article class="event">
+        <figure>
+          <img src="../img/decada.jpg" alt="Crescimento nacional" />
+        </figure>
+        <div class="event-body">
+          <time datetime="1930">1930–1940</time>
+          <h4>Crescimento nacional</h4>
+          <p>Ao longo das décadas de 1930 e 1940 o clube consolidou a sua presença no futebol espanhol, com títulos e maior organização institucional.</p>
+        </div>
+      </article>
+
+      <article class="event">
+        <figure>
+          <img src="../img/1930.jpg" alt="Primeira Taça Europeia" />
+          
+        </figure>
+        <div class="event-body">
+          <time datetime="1955">1955</time>
+          <h4>Primeira Taça Europeia</h4>
+          <p>Em meados do século XX o Real Madrid conquistou as primeiras edições da competição europeia, afirmando-se internacionalmente.</p>
+        </div>
+      </article>
+
+      <article class="event">
+        <figure>
+          <img src="../img/1960.jpg" alt="Anos 1960" />
+        </figure>
+        <div class="event-body">
+          <time datetime="1960">Anos 1960</time>
+          <h4>Consistência e glória</h4>
+          <p>Os anos 60 foram marcados por consistência esportiva e confirmaram o Real Madrid como força dominante em Espanha e na Europa.</p>
+        </div>
+      </article>
+
+      <article class="event">
+        <figure>
+          <img src="../img/1998.jpg" alt="Retorno à glória" />
+        </figure>
+        <div class="event-body">
+          <time datetime="1998">1998</time>
+          <h4>Retorno europeu</h4>
+          <p>No final do século XX o clube voltou a conquistar títulos europeus importantes, renovando a sua trajetória de sucesso.</p>
+        </div>
+      </article>
+
+      <article class="event">
+        <figure>
+          <img src="../img/1950.jpg" alt="Glórias Europeias" />
+        </figure>
+        <div class="event-body">
+          <time datetime="1950">1950–1960</time>
+          <h4>Primeiras glórias europeias</h4>
+          <p>Durante os anos 50 o clube começou a conquistar títulos europeus e a estabelecer a sua imagem internacional.</p>
+        </div>
+      </article>
+
+      <article class="event">
+        <figure>
+          <img src="../img/galaticos.jpg" alt="Era dos Galácticos" />
+        </figure>
+        <div class="event-body">
+          <time datetime="2000">Anos 2000</time>
+          <h4>Era dos Galácticos</h4>
+          <p>Período em que o clube contratou várias estrelas internacionais, reforçando a sua projeção global.</p>
+        </div>
+      </article>
+
+      <article class="event">
+        <figure>
+          <img src="../img/sucesso.webp" alt="Sucesso na Champions" />
+        </figure>
+        <div class="event-body">
+          <time datetime="2014">2014–2022</time>
+          <h4>Sucesso moderno na Europa</h4>
+          <p>O clube voltou a dominar a Europa com múltiplas conquistas da Liga dos Campeões.</p>
+        </div>
+      </article>
     </section>
   </main>
 
