@@ -4,11 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Real Madrid</title>
+  <meta name="description" content="Projeto sobre o Real Madrid — história, plantel e títulos. Trabalho de David Macieira.">
+  <meta property="og:title" content="Real Madrid — Projeto David Macieira">
+  <meta property="og:description" content="História, plantel e títulos do Real Madrid.">
+  <meta property="og:image" content="/img/estadio.webp">
+  <link rel="icon" href="icons/favicon.ico">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  <!--Logo do instagram-->
 
 </head>
 <body>
+  <a class="skip-link" href="#maincontent">Saltar para o conteúdo</a>
   <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
@@ -16,20 +22,21 @@
         <img src="icons/logo_clube.png" alt="Real Madrid logo" class="logo" />
         <span class="club-name">Real Madrid CF</span>
       </a>
-      <nav class="main-nav">
-        <a href="index.html" class="active">Início</a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="index.html" class="active" aria-current="page">Início</a>
         <a href="pages/equipamentos.html">Equipamentos</a>
         <a href="pages/historia.html">História</a>
         <a href="pages/plantel.html">Plantel</a>
         <a href="pages/titulos.html">Títulos</a>
+        <a href="pages/jogos.html">Jogos</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <main class="container">
+  <main id="maincontent" class="container">
     <section class="hero">
-      <img src="img/estadio.webp" alt="Estádio Santiago Bernabéu" class="hero-img" />
+      <img src="img/estadio.webp" alt="Estádio Santiago Bernabéu" class="hero-img" loading="lazy" width="1600" height="900" />
       <div class="hero-text">
         <h1>Real Madrid</h1>
         <p class="lead">Trabalho desenvolvido por David Macieira</p>
@@ -47,10 +54,8 @@
   <article class="card news-card">
     <h3>Últimas Notícias</h3>
     <ul>
-      <li >Empate 2-2 em Elche</li>
-      <br>
+      <li>Empate 2-2 em Elche</li>
       <li>Florentino Pérez sobre a proposta de reforma estatutária: "Queremos que os 100 mil sócios sejam, de forma ativa, os guardiões do nosso patrimônio"</li>
-      <br>
       <li>Florentino Pérez: "A união de todos tem sido a base para vivermos um dos ciclos vencedores mais importantes da nossa história".</li>
     </ul>
   </article>
@@ -64,8 +69,8 @@
     <h3>Seguir o Clube</h3>
     <p>Siga-nos nas redes sociais e acompanhe o plantel e os próximos jogos.</p>
     <div class="social-links">
-      <a href="https://www.instagram.com/realmadrid" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.youtube.com/channel/UCWV3obpZVGgJ3j9FVhEjF2Q" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/realmadrid" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/channel/UCWV3obpZVGgJ3j9FVhEjF2Q" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
     </div>
   </article>
 </section>
@@ -79,5 +84,7 @@
       <p>Site criado por David Macieira — IPCA / CTESP - Desenvolvimento Web e Multimédia</p>
     </div>
   </footer>
+</footer>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

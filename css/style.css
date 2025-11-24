@@ -238,4 +238,15 @@ input[type="text"], input[type="email"], textarea { width:100%; padding:0.6rem; 
 .image-stage img { display:block; width:auto; max-width:100%; max-height:460px; object-fit:contain; }
 
 
+/* Small accessibility and spacing tweaks */
+.card ul li { margin-bottom: 0.6rem; }
+
+/* Skip link hidden by default, visible on focus */
+.skip-link { position: absolute; left: -999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+.skip-link:focus { position: fixed; left: 1rem; top: 1rem; width: auto; height: auto; padding: 0.4rem 0.6rem; background: var(--blue); color: #fff; border-radius: 6px; z-index: 9999; }
+
+/* Visible focus styles for keyboard users */
+a:focus, button:focus { outline: 3px solid rgba(0,82,159,0.18); outline-offset: 3px; }
+
+
 
