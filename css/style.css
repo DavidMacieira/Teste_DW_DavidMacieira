@@ -1,0 +1,91 @@
+/* Reset básico */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; line-height: 1.4; color:#111; background:#fff; }
+
+/* Variáveis de cores */
+:root {
+  --white: #ffffff;
+  --blue: #00529F;
+  --gold: #D4AF37;
+  --muted: #666;
+  --container: 1100px;
+
+  /* Cores por posição do plantel */
+  --gk: #cce0ff;
+  --def: #d0ffd6;
+  --mid: #fff4cc;
+  --att: #ffd6d6;
+}
+
+/* Container padrão */
+.container { max-width: var(--container); margin: 0 auto; padding: 1rem; }
+
+/* Header */
+.site-header { background: var(--white); border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 10; }
+.header-inner { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:0.5rem 0; }
+.brand { display:flex; align-items:center; gap:0.6rem; text-decoration:none; color: inherit; }
+.logo { width:48px; height:auto; }
+.club-name { font-weight:700; color:var(--blue); }
+
+.main-nav a { margin-left:1rem; text-decoration:none; color:var(--muted); padding:0.4rem 0.6rem; border-radius:6px; }
+.main-nav a:hover, .main-nav a.active { color:var(--blue); font-weight:600; }
+
+/* Hero */
+.hero { display:grid; grid-template-columns: 1fr; gap:1rem; align-items:center; margin:1.2rem 0; }
+.hero-img { width:100%; max-height:320px; object-fit:cover; border-radius:10px; box-shadow:0 6px 20px rgba(0,0,0,0.08); }
+.hero-text { padding:0.5rem 0; }
+.hero-text h1 { font-size: 2rem; color: var(--blue); margin-bottom: 0.5rem; }
+.lead { font-weight:600; color:var(--muted); margin-top:0.3rem; }
+
+.cta-group .btn { text-decoration:none; display:inline-block; padding:0.6rem 1rem; border-radius:8px; margin-right:0.6rem; background:var(--blue); color:white; transition: background 0.3s; }
+.cta-group .btn:hover { background: #003e7e; }
+.cta-group .btn.ghost { background:transparent; border:1px solid var(--blue); color:var(--blue); }
+.cta-group .btn.ghost:hover { background: var(--blue); color:white; }
+
+/* Cards genéricos */
+.cards { display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin-bottom:2rem; }
+.card { padding:1rem; border:1px solid #eee; border-radius:10px; background:#fff; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
+
+/* Player Grid */
+.player-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap:1rem; margin-top:1rem; }
+.player-grid h2 { grid-column: 1/-1; color: var(--blue); margin-bottom:0.5rem; font-size:1.3rem; }
+
+/* Player Card */
+.player-card {
+  border:1px solid #eee;
+  border-radius:10px;
+  padding:0.6rem;
+  text-align:center;
+  background:#fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.player-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+
+.player-card img { width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:0.6rem; }
+.player-card h3 { font-size:1.1rem; margin-bottom:0.3rem; color:var(--blue); }
+.player-card .position { color:var(--muted); font-size:0.9rem; }
+
+/* Diferenciação por posição */
+.player-card.gk { background-color: var(--gk); }
+.player-card.def { background-color: var(--def); }
+.player-card.mid { background-color: var(--mid); }
+.player-card.att { background-color: var(--att); }
+
+/* Formulários */
+label { display:block; margin-bottom:0.6rem; }
+input[type="text"], input[type="email"], textarea { width:100%; padding:0.6rem; border:1px solid #ddd; border-radius:6px; }
+.btn { background:var(--blue); color:white; border:none; padding:0.6rem 1rem; border-radius:8px; cursor:pointer; }
+
+/* Footer */
+.site-footer { border-top:1px solid #eee; padding:1rem 0; margin-top:2rem; background:#fafafa; color:var(--muted); }
+.footer-inner { text-align:center; }
+
+/* Responsividade */
+@media (min-width: 900px) {
+  .hero { grid-template-columns: 1fr 1fr; gap:2rem; }
+  .hero-img { max-height:420px; }
+}
+@media (max-width: 600px) {
+  .player-grid { grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); }
+  .player-card img { height:160px; }
+}
